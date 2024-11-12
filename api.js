@@ -1,7 +1,7 @@
 import axios from "axios";
+import 'dotenv/config';
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
-require('dotenv').config();
+const BASE_URL = "https://kitchenly-backend.onrender.com";
 
 
 /** API Class.
