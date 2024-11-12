@@ -1,8 +1,6 @@
 import axios from "axios";
-import 'dotenv/config';
 
 const BASE_URL = "https://kitchenly-backend.onrender.com";
-
 
 /** API Class.
  * 
