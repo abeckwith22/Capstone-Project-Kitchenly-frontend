@@ -1,0 +1,94 @@
+
+.NavBarWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+}
+
+.NavBarWrapper .title {
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-font-title);
+    transition: color 0.5s;
+}
+
+.NavBarWrapper .title:hover {
+    color: var(--color-font-title-hover);
+}
+
+.NavBarWrapper ul {
+    display: flex;
+}
+
+.NavBarWrapper ul li {
+    list-style: none;
+}
+
+.NavBarWrapper ul li a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-font);
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.NavBarWrapper ul li a:not(.active):hover {
+    background-color: var(--color-button);
+}
+
+.NavBarWrapper .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+.NavBarWrapper .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: var(--color-font);
+    border-radius: 0.2rem;
+}
+
+@media (max-width: 480px) {
+    .NavBarWrapper .menu {
+        display: flex;
+    }
+
+    .NavBarWrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .NavBarWrapper ul.open {
+        display: flex;
+    }
+
+    .NavBarWrapper ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    .NavBarWrapper ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .NavBarWrapper ul li a {
+        margin: 0.2rem 0.5rem;
+    }
+}
