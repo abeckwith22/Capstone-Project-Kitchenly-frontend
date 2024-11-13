@@ -40,6 +40,17 @@
     border-radius: 0.5rem;
 }
 
+.NavLinkDiv {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-font);
+    border-radius: 0.5rem;
+}
+.NavLinkDiv:not(.active):hover {
+    background-color: var(--color-button);
+}
+
 .NavBarWrapper ul li a:not(.active):hover {
     background-color: var(--color-button);
 }

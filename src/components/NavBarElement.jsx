@@ -3,12 +3,15 @@ import { useState } from "react";
 import { useAuthContext } from "../helpers/AuthProvider";
 import "../styles/NavBarElement.css"
 import SearchBar from "../routes/SearchBar";
+import useForm from "../hooks/useForm";
 
 const NavBarElement = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { user, isLoaded } = useAuthContext();
 
   if(!isLoaded) return;
+
+  const { handleGetAllRecipes } = useForm();
 
   return (
     <>
@@ -32,6 +35,11 @@ const NavBarElement = () => {
             <>
               <li>
                 <NavLink className="newRecipe" to={"/recipes/new"}>New Recipe</NavLink>
+              </li>
+              <li>
+                <div className="NavLinkDiv" onClick={handleGetAllRecipes}>
+                  <NavLink className="allRecipes">All Recipes</NavLink>
+                </div>
               </li>
               <li>
                 <NavLink className="profile" to={"/profile"}>Profile</NavLink>

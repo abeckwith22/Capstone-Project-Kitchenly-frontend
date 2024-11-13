@@ -51,6 +51,11 @@ const useForm = (INITIAL_STATE={}) => {
         navigate("/recipes", { state: { recipes: recipes }});
     }
 
+    const handleGetAllRecipes = async e => {
+        const recipes = await KitchenlyApi.getRecipes({ title: "" });
+        navigate("/recipes", { state: { recipes: recipes }});
+    }
+
     /********** Recipes *********/
 
     const handleCreateRecipe = async (e,ingredients=[],tags=[]) => {
@@ -143,6 +148,7 @@ const useForm = (INITIAL_STATE={}) => {
         handleSignUp, 
         handleLogin, 
         handleSearch, 
+        handleGetAllRecipes,
         handleCreateRecipe, 
         createRecipeDraft,
         handleEditRecipe,

@@ -11,7 +11,6 @@ const RecipeCard = ({ id, username, title, preparation_time, cooking_time, servi
         navigate(`/recipes/${id}`, { state: { recipe: recipe }});
     }
 
-
     const formatDate = (time) => {
         const date = new Date(time);
         const year = date.getFullYear();
