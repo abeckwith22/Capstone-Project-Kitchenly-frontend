@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://kitchenly-backend.onrender.com";
+const BASE_URL = "https://jobly-backend-x8r1.onrender.com";
+// const BASE_URL = "http://localhost:3001";
 
 /** API Class.
  * 

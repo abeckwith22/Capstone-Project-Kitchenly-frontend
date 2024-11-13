@@ -41,7 +41,7 @@ const FormSignUp = () => {
                                 <label htmlFor="email">Email</label>
                                 <input onChange={handleChange} id="email" name="email" type="text" />
                             </div>
-                            <div className="FormSubmit">
+                            <div className="">
                                 <button className="FormButton">Sign up</button>
                             </div>
                         </div>

@@ -36,8 +36,7 @@
 
 .FormSubmit {
     cursor: pointer;
-    margin: 0em 0em;
-    padding: 0.5em 0em;
+    margin: 0em;
     border: 1px solid var(--color-font);
     width: 100%;
     color: var(--color-font);
